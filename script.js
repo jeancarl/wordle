@@ -179,7 +179,7 @@ document.addEventListener("keyup", (e) => {
     return;
   }
 
-  if (pressedKey === "Enter") {
+  if (pressedKey === "Enter" ) {
     checkGuess();
     return;
   }
@@ -200,9 +200,13 @@ document.getElementById("keyboard-cont").addEventListener("click", (e) => {
   }
   let key = target.textContent;
 
-  if (key === "Del") {
+  if (key === "&larr;") {
     key = "Backspace";
   }
+
+  if (key === "&crarr;") {
+    key = "Enter";
+  }  
 
   document.dispatchEvent(new KeyboardEvent("keyup", { key: key }));
 });

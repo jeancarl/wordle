@@ -16,13 +16,17 @@ function newGame() {
 
   console.log(rightGuessString);
 
+  for (const elem of document.getElementsByClassName("keyboard-button")) {
+    elem.style.backgroundColor = "";
+  }
+
   initBoard();
 }
 
 function initBoard() {
   let board = document.getElementById("game-board");
   board.innerHTML = "";
-  
+
   for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
     let row = document.createElement("div");
     row.className = "letter-row";
@@ -37,6 +41,7 @@ function initBoard() {
     board.appendChild(row);
   }
 }
+
 
 function shadeKeyBoard(letter, color) {
   for (const elem of document.getElementsByClassName("keyboard-button")) {

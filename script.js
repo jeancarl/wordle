@@ -21,7 +21,8 @@ function newGame() {
 
 function initBoard() {
   let board = document.getElementById("game-board");
-
+  board.innerHTML = "";
+  
   for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
     let row = document.createElement("div");
     row.className = "letter-row";

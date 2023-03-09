@@ -37,7 +37,6 @@ h1 {
   align-items: center;
   position: absolute;
   bottom: 10px;
-  right: 10px;
 }
 
 #keyboard-cont div {
@@ -57,4 +56,10 @@ h1 {
   width: 5rem;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+#newgame {
+  position: absolute; 
+  top: 10px;
+  right: 10px;
 }

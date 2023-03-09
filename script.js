@@ -8,6 +8,15 @@ let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
 
 console.log(rightGuessString);
 
+function newGame() {
+  guessesRemaining = NUMBER_OF_GUESSES;
+  currentGuess = [];
+  nextLetter = 0;
+  rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
+
+  initBoard();
+}
+
 function initBoard() {
   let board = document.getElementById("game-board");
 
@@ -17,6 +26,7 @@ function initBoard() {
 
     for (let j = 0; j < 5; j++) {
       let box = document.createElement("div");
+
       box.className = "letter-box";
       row.appendChild(box);
     }
@@ -197,4 +207,6 @@ document.getElementById("keyboard-cont").addEventListener("click", (e) => {
   document.dispatchEvent(new KeyboardEvent("keyup", { key: key }));
 });
 
-initBoard();
+document.getElementById("newgame").addEventListener("click", newGame);
+
+newGame();

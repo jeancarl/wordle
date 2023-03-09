@@ -6,13 +6,15 @@ let currentGuess = [];
 let nextLetter = 0;
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
 
-console.log(rightGuessString);
+
 
 function newGame() {
   guessesRemaining = NUMBER_OF_GUESSES;
   currentGuess = [];
   nextLetter = 0;
   rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
+
+  console.log(rightGuessString);
 
   initBoard();
 }
@@ -200,11 +202,11 @@ document.getElementById("keyboard-cont").addEventListener("click", (e) => {
   }
   let key = target.textContent;
 
-  if (key === "&larr;") {
+  if (key === "←") {
     key = "Backspace";
   }
 
-  if (key === "&crarr;") {
+  if (key === "↵") {
     key = "Enter";
   }  
 
